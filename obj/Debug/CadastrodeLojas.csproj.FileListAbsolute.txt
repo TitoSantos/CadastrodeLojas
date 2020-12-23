@@ -1,0 +1,7 @@
+D:\CursoC#\Projects\Course\CadastrodeLojas\bin\Debug\CadastrodeLojas.exe.config
+D:\CursoC#\Projects\Course\CadastrodeLojas\bin\Debug\CadastrodeLojas.exe
+D:\CursoC#\Projects\Course\CadastrodeLojas\bin\Debug\CadastrodeLojas.pdb
+D:\CursoC#\Projects\Course\CadastrodeLojas\obj\Debug\CadastrodeLojas.csprojAssemblyReference.cache
+D:\CursoC#\Projects\Course\CadastrodeLojas\obj\Debug\CadastrodeLojas.csproj.CoreCompileInputs.cache
+D:\CursoC#\Projects\Course\CadastrodeLojas\obj\Debug\CadastrodeLojas.exe
+D:\CursoC#\Projects\Course\CadastrodeLojas\obj\Debug\CadastrodeLojas.pdb
