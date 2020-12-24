@@ -11,7 +11,7 @@ namespace CadastrodeLojas
 {
     class Program
     {
-        static List<Loja> lojas = new List<Loja>();
+        //static List<Loja> lojas = new List<Loja>();
         static void Main(string[] args)
         {
             MenuPrincipal();
@@ -65,7 +65,6 @@ namespace CadastrodeLojas
         
         static void Cadastro()
         {
-            Loja novaLoja = new Loja();
 
             Console.Clear();
             Console.WriteLine(" *********************** CADASTRO DE LOJA *********************** ");
@@ -79,7 +78,9 @@ namespace CadastrodeLojas
             Console.Write("Tipo da loja será? (0)Alimentação, (1)Confecção, (2)Livros ou (3)Serviços: ");
             TipoLoja tipo = (TipoLoja)Enum.Parse(typeof(TipoLoja), Console.ReadLine());
 
-            lojas.Add(novaLoja);
+            Loja novaLoja = new Loja(nome, codigo, tipo, area);
+            novaLoja.AdicionarLoja(novaLoja);
+            
         }
 
         static void Consulta()
