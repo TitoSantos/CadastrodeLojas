@@ -11,7 +11,7 @@ namespace CadastrodeLojas
 {
     class Program
     {
-        
+        static List<Loja> lojas = new List<Loja>();
         static void Main(string[] args)
         {
             MenuPrincipal();
@@ -72,9 +72,8 @@ namespace CadastrodeLojas
             Console.Write("Informe a área em M²: ");
             double area = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Loja novaLoja = new Loja(codigo, nome, tipo, area);
-            novaLoja.AdicionarLoja(novaLoja);
-
+            lojas.Add(new Loja(codigo, nome, tipo, area));
+            
             Console.WriteLine();
             Console.Write("Deseja adicionar outra loja (S/N)? ");
             char resp = char.Parse(Console.ReadLine());
@@ -107,7 +106,10 @@ namespace CadastrodeLojas
             switch (op)
             {
                 case 1:
-                    ConsultaCodigo();
+                    ConsultarCodigo();
+                    break;
+                case 2:
+                    ConsultarNome();
                     break;
                 default:
                     Console.WriteLine("Opção inválida. Favor informar uma das opções da lista!");
@@ -117,15 +119,48 @@ namespace CadastrodeLojas
 
         }
 
-        static void ConsultaCodigo()
+        static void ConsultarCodigo()
         {
             Console.Clear();
             Console.WriteLine(" *********************** CONSULTA POR CÓDIGO *********************** ");
             Console.WriteLine();
             Console.Write("Digite o código da loja: ");
-            int codigo = int.Parse(Console.ReadLine());
-            Loja loja = new Loja(codigo); 
+            int pesquisaId = int.Parse(Console.ReadLine());
 
+            Loja id = lojas.Find(x => x.Codigo == pesquisaId);
+            if (id != null)
+            {
+                Console.WriteLine(id);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Código não encontrado!");
+                Console.ReadKey();
+            }
+            
+        }
+
+        static void ConsultarNome()
+        {
+            Console.Clear();
+            Console.WriteLine(" *********************** CONSULTA POR NOME *********************** ");
+            Console.WriteLine();
+            Console.Write("Digite o nome da loja: ");
+            string pesquinaNome = Console.ReadLine();
+
+            Loja nome = lojas.Find(x => x.Nome == pesquinaNome);
+
+            if (nome != null)
+            {
+                Console.WriteLine(nome);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Nome não encontrado!");
+                Console.ReadKey();
+            }
         }
         static void Relatorio()
         {
