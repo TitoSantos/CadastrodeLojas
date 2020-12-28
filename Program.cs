@@ -91,12 +91,10 @@ namespace CadastrodeLojas
         static void Consulta()
         {
             Console.Clear();
-            Console.WriteLine(" *********************** CONSULTAR DE LOJAS CADASTRADAS *********************** ");
+            Console.WriteLine(" *********************** CONSULTAR LOJAS CADASTRADAS *********************** ");
             Console.WriteLine();
             Console.WriteLine("                                1 - Por código");
             Console.WriteLine("                                2 - Por nome");
-            Console.WriteLine("                                3 - Por tipo");
-            Console.WriteLine("                                4 - Por área");
 
             Console.Write("                                    \nOp.: ");
 
@@ -137,6 +135,7 @@ namespace CadastrodeLojas
             {
                 Console.WriteLine("Código não encontrado!");
                 Console.ReadKey();
+                ConsultarCodigo();
             }
             
         }
@@ -158,13 +157,23 @@ namespace CadastrodeLojas
             }
             else
             {
-                Console.WriteLine("Nome não encontrado!");
+                Console.WriteLine("Nome não foi encontrado!");
                 Console.ReadKey();
+                ConsultarNome();
             }
         }
         static void Relatorio()
         {
+            Console.Clear();
+            Console.WriteLine(" *********************** LISTAGEM DE LOJAS CADASTRADAS *********************** ");
+            Console.WriteLine();
 
+            foreach(Loja obj in lojas)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.ReadKey();
         }
 
     }

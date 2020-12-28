@@ -54,6 +54,8 @@ namespace CadastrodeLojas.Entities
 
         public override string ToString()
         {
+            string titulo = "|  CÓDIGO  |       NOME       |    TIPO    |    AREA   |  VALOR DO ALUGUEL  |";
+            /*
             return " Código da loja: "
                         +Codigo
                         + ", Razão Social: " 
@@ -62,6 +64,23 @@ namespace CadastrodeLojas.Entities
                         + TipoLoja
                         + ", Valor do aluguel: R$"
                         + ValorAluguel().ToString("F2", CultureInfo.InvariantCulture);
+            */
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(titulo);
+            sb.AppendLine("    ");
+            sb.Append("    ");
+            sb.Append(Codigo);
+            sb.Append("       ");
+            sb.Append(Nome);
+            sb.Append("        ");
+            sb.Append(TipoLoja);
+            sb.Append("        ");
+            sb.Append(Area);
+            sb.Append("        ");
+            sb.Append(ValorAluguel().ToString("F2", CultureInfo.InvariantCulture));
+            sb.AppendLine("    ");
+
+            return sb.ToString();
         }
     }
 
