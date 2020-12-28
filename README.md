@@ -6,7 +6,7 @@
 
 
 
-<h6>**Sobre o projeto**</h6>
+<h3><strong>Sobre o projeto</strong></h3>
 
  Aplicativo de cadastro de lojas feito em console utilizando a linguagem **C#**. O aplicativo contém Uma tela de cadastro para o usuário informar o código, nome, tipo e área(em metros quadrados) das lojas. Também existe uma tela de consulta e uma tela de relatório. 
 
@@ -18,7 +18,7 @@ Foram usadas algumas expressões lambda para satisfazer os predicados das pesqui
 
 
 
-<h5>**Tecnologias Utilizadas**</h5>
+<h3><strong>Tecnologias Utilizadas</strong></h3>
 
 - Visual Studio
 - Linguagem C#
@@ -27,7 +27,7 @@ Foram usadas algumas expressões lambda para satisfazer os predicados das pesqui
 
 
 
-<h5>**Clonar este repositório**</h5>
+<h3><strong>Clonar este repositório</strong></h3>
 
 git clone https://github.com/TitoSantos/CadastrodeLojas
 
@@ -35,7 +35,7 @@ git clone https://github.com/TitoSantos/CadastrodeLojas
 
 
 
-<h5>**Autor**</h5>
+<h3><strong>Autor</strong></h3>
 
 Tiago Martiniano dos Santos (TitoSantos)
 
